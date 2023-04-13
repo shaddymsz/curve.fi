@@ -1,11 +1,11 @@
+import { ConnectKitButton } from "connectkit";
 import React from "react";
 
 function Header() {
-
   return (
     <>
       {" "}
-       <div className="header_wrapper">
+      <div className="header_wrapper">
         <div className="container">
           <div className="header_top_content">
             <div className="header_top_left">
@@ -84,7 +84,7 @@ function Header() {
               <div className="logo">
                 <a href="/">
                   {" "}
-                  <img src="https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FF5ZS9RzAWKZnNxm9F85H%2FCurve-Logo-HighRez.png?alt=media&token=51c58ab0-e774-4b30-92ac-69f643400c56"/>
+                  <img src="https://2254922201-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MFA0rQI3SzfbVFgp3Ic%2Fuploads%2FF5ZS9RzAWKZnNxm9F85H%2FCurve-Logo-HighRez.png?alt=media&token=51c58ab0-e774-4b30-92ac-69f643400c56" />
                   <span>Curve</span>
                 </a>
               </div>
@@ -147,15 +147,26 @@ function Header() {
                 </div>
               </div>
               <div className="connect_wlt_btn">
-                <button type="button">Connect Wallet</button>
+                <ConnectKitButton.Custom>
+                  {({
+                    isConnected,
+
+                    show,
+
+                    address,
+                  }) => {
+                    return (
+                      <button onClick={show}>
+                        {isConnected ? address : " Connect Wallet"}
+                      </button>
+                    );
+                  }}
+                </ConnectKitButton.Custom>
               </div>
             </div>
           </div>
         </div>
-       
-      </div> 
-      
-     
+      </div>
     </>
   );
 }

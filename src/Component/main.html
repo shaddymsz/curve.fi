@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Centered Items with Rectangles</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+   
+    <style>
+      /* center all items */
+      body {
+        text-align: center;
+      }
+
+      /* style for cards */
+      .card {
+        display: inline-block;
+        width: 310px;
+        height: 225px;
+        margin: 10px;
+        /* border: 1px solid #030303; */
+        box-shadow: 0 2px 25px rgb(0 0 0 / 20%);
+        background-color: lightblue;
+        border-radius: 0.2rem;
+      }
+
+      /* style for card container */
+      .card-container {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      /* style for first column */
+      .first-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* style for second column */
+      .second-column {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* style for third column */
+      .third-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* style for paragraph */
+      p {
+        font-size: 20px;
+        max-width: 35rem;
+        margin: 0 auto;
+      }
+
+      /* media queries for responsiveness */
+      @media only screen and (max-width: 768px) {
+        .card {
+          width: 150px;
+          height: 225px;
+        }
+        .card-container{
+            flex-direction: row;   
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .card {
+          width: 335px;
+          height: 180px;
+        }
+        .card-container {
+          flex-direction: column;
+        }
+        .second-column {
+          /* margin-top: 20px; */
+        }
+      }
+      h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  color: #76757A;
+}
+.Subheading {
+  font-weight: 600;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+}
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Page Heading</h1>
+    <h2 class="Subheading">Subheading</h2>
+    <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor tortor quis tellus malesuada, eget lobortis velit tincidunt. Donec ullamcorper massa nulla, sit amet tincidunt turpis accumsan sit amet. Duis euismod risus et purus consectetur malesuada. Nullam eget malesuada turpis, sit amet venenatis lorem.</p>
+    <div class="card-container">
+      <div class="first-column">
+        <div class="card">
+          <h3>Card 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="second-column">
+        <div class="card">
+          <h3>Card 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+          <h3>Card 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="third-column">
+        <div class="card">
+          <h3>Card 4</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
